@@ -1,13 +1,12 @@
 import { Routes, Route, Outlet } from 'react-router';
+import { Details, Home, Login, Register, Reservations } from '../app';
 
 function AppRouter() {
 	return (
 		<Routes>
-			<Route path="/" element={<h2>Home</h2>} />
-			<Route path="/hotel/:id" element={<h2>Details</h2>} />
-			<Route path="/reservations" element={<h2>Reservations</h2>} />
-			<Route path="/reservations" element={<h2>Reservations</h2>} />
-			<Route path="/reservations" element={<h2>Reservations</h2>} />
+			<Route path="/" element={<Home />} />
+			<Route path="/hotel/:id" element={<Details />} />
+			<Route path="/reservations" element={<Reservations />} />
 
 			<Route
 				element={
@@ -17,8 +16,8 @@ function AppRouter() {
 					</div>
 				}
 			>
-				<Route path="login" element={<h2>Login</h2>} />
-				<Route path="register" element={<h2>Register</h2>} />
+				<Route path="login" element={<Login />} />
+				<Route path="register" element={<Register />} />
 			</Route>
 		</Routes>
 	);
