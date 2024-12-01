@@ -9,7 +9,7 @@ function RatingStars({ rating }) {
 		if (index < Math.floor(rating)) {
 			return <TiStarFullOutline />;
 		} else if (index < rating) {
-			<TiStarHalfOutline />;
+			return <TiStarHalfOutline />;
 		} else {
 			return <TiStarOutline />;
 		}
