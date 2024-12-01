@@ -1,4 +1,8 @@
-# React + Vite
+# Booking App
+
+Despliegue: https://booking-oscar.netlify.app
+
+React router dom, react hook form, zod
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
