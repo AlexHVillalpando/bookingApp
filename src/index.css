@@ -2,11 +2,42 @@
 @tailwind components;
 @tailwind utilities;
 
+/* @font-face {
+	font-family: 'Inter Variable';
+	font-style: normal;
+	font-display: swap;
+	font-weight: 100 900;
+	src: url(@fontsource-variable/inter/files/inter-latin-wght-normal.woff2)
+		format('woff2-variations');
+	unicode-range: U+00-52F, U+1E00-1FFF, U+2200-22FF;
+} */
+
 @layer base {
+	html {
+		font-family: sans-serif;
+	}
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	@apply text-balance;
+}
+
+p {
+	@apply text-pretty;
 }
 
 @layer components {
+	.btn {
+		@apply block bg-blue-500 text-white font-semibold text-center rounded-lg px-4 py-2;
+	}
 }
-
 @layer utilities {
+	.bg-attachment {
+		background-attachment: fixed;
+	}
 }

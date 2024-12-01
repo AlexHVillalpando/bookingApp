@@ -14,7 +14,9 @@ function Home() {
 
 	return (
 		<div>
-			<HotelsList hotels={hotels} />
+			<main className="max-w-[1280px] mx-auto px-5 py-10">
+				<HotelsList hotels={hotels} />
+			</main>
 		</div>
 	);
 }
