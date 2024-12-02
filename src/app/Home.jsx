@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { useHotels } from '../context/hotels';
+import { useHotels } from './context/hotels';
 import HotelsList from '../components/home/HotelsList';
 
 function Home() {
