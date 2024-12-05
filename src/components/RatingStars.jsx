@@ -1,17 +1,13 @@
-import {
-	TiStarFullOutline,
-	TiStarHalfOutline,
-	TiStarOutline,
-} from 'react-icons/ti';
+import { FaRegStar, FaStarHalfStroke, FaStar } from 'react-icons/fa6';
 
 function RatingStars({ rating }) {
 	const renderStar = (index) => {
 		if (index < Math.floor(rating)) {
-			return <TiStarFullOutline />;
+			return <FaStar />; // Estrella Completa
 		} else if (index < rating) {
-			return <TiStarHalfOutline />;
+			return <FaStarHalfStroke />; //Estrella mitad
 		} else {
-			return <TiStarOutline />;
+			return <FaRegStar />; // Estrella Vacia.
 		}
 	};
 
@@ -20,13 +16,13 @@ function RatingStars({ rating }) {
 			<span className="flex items-center">
 				{[...Array(5)].map((_, index) => {
 					return (
-						<span key={index} className="text-amber-400 text-lg">
+						<span key={index} className="text-amber-300 text-lg">
 							{renderStar(index)}
 						</span>
 					);
 				})}
-			</span>
-			<span>{rating}</span>
+			</span>{' '}
+			<span className="text-gray-400">{rating}</span>
 		</div>
 	);
 }

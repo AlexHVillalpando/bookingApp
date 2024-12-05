@@ -1,5 +1,5 @@
-export { Home } from './Home';
-export { Details } from './Details';
-export { Login } from './Login';
-export { Register } from './Register';
-export { Reservations } from './Reservations';
+export { Home } from './Home.jsx';
+export { Details } from './Details.jsx';
+export { Login } from './Login.jsx';
+export { Register } from './Register.jsx';
+export { Reservations } from './Reservations.jsx';

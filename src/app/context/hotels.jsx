@@ -1,6 +1,5 @@
-//Zustand
 import { create } from 'zustand';
-import api from '../../services/api';
+import api from '../services/api';
 
 const useHotels = create((set) => {
 	return {
@@ -14,7 +13,7 @@ const useHotels = create((set) => {
 				localStorage.setItem('hotels', JSON.stringify(res.data));
 				set({ hotels: res.data });
 			} catch (error) {
-				set({ loading: false, error: error.message });
+				set({ error: error.message });
 			} finally {
 				set({ loading: false });
 			}
