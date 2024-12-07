@@ -1,13 +1,24 @@
+import { useEffect, useState } from 'react';
+
+import ImageGallery from 'react-image-gallery';
+import 'react-image-gallery/styles/css/image-gallery.css';
+
 function Gallery({ hotel }) {
-	const images = hotel?.images && hotel.images[0].url;
+	const [images, setImages] = useState([]);
+
+	useEffect(() => {
+		if (hotel) {
+			const fotos = hotel?.images?.map((item) => ({
+				original: item.url,
+				thumbnail: item.url,
+			}));
+			setImages(fotos);
+		}
+	}, [hotel]);
 
 	return (
-		<div className="aspect-square rounded-lg overflow-hidden">
-			<img
-				src={images}
-				alt={hotel?.name}
-				className="w-full h-full object-cover"
-			/>
+		<div className="w-full">
+			<ImageGallery items={images} showPlayButton={false} autoPlay={true} />
 		</div>
 	);
 }
