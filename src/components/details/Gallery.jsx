@@ -17,8 +17,8 @@ function Gallery({ hotel }) {
 	}, [hotel]);
 
 	return (
-		<div className="w-full">
-			<ImageGallery items={images} showPlayButton={false} autoPlay={true} />
+		<div className="w-full h-full">
+			<ImageGallery items={images} autoPlay={true} />
 		</div>
 	);
 }

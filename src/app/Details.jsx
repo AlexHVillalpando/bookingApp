@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { useParams } from 'react-router';
+import { Link, useParams } from 'react-router';
 import useApiFetch from '../hooks/useApiFetch';
 import Reservation from '../components/details/Reservation';
 import RelatedHotels from '../components/details/RelatedHotels';
@@ -47,14 +47,21 @@ function Details() {
 							<p className="flex items-center justify-center gap-1">
 								<MdLockOutline className="size-5" />
 								<span className="text-sm">
-									Please, login to make a reservation.
+									Please,{' '}
+									<Link
+										to="/login"
+										className="hover:text-blue-600 transition-colors duration-400"
+									>
+										login
+									</Link>{' '}
+									to make a reservation.
 								</span>
 							</p>
 						</>
 					)}
 				</div>
 				{/*Grid */}
-				<div className="grid grid-cols-2 gap-5">
+				<div className="grid grid-cols-2 gap-5 mb-8">
 					<div className="col-span-2">
 						<Description
 							rating={hotel?.rating}
@@ -62,19 +69,29 @@ function Details() {
 							description={hotel?.description}
 						/>
 					</div>
-					<div className="col-span-2 mb-12">
-						<div className="flex w-auto items-start flex-row flex-wrap justify-center gap-5 ">
-							<div className="flex min-w-80 w-[450px]">
+					<div className="col-span-2">
+						<div className="flex w-full items-center flex-row flex-wrap justify-center gap-5">
+							<div className="flex max-w-[397px]">
 								<Gallery hotel={hotel} />
 							</div>
-							<div className="flex min-w-80 w-[450px] aspect-square">
+							<div className="flex w-[500px]">
 								<Map lat={hotel?.lat} lon={hotel?.lon} />
 							</div>
 						</div>
 					</div>
 				</div>
-				<Reviews hotelId={hotel?.id} />
-				<RelatedHotels />
+
+				<div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+					<div>
+						<Reviews hotelId={hotel?.id} />
+					</div>
+
+					<div className="h-full">
+						<div className="sticky top-20">
+							<RelatedHotels cityId={hotel?.cityId} hotelId={hotel?.id} />
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	);
