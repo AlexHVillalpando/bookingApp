@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-import { FaRegStar, FaStarHalfStroke, FaStar } from 'react-icons/fa6';
+import { FaStar } from 'react-icons/fa6';
 import { cn } from '../../utils';
 
 function ReviewRating({ setReview }) {

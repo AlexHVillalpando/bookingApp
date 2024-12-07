@@ -3,6 +3,7 @@ import useApiFetch from '../hooks/useApiFetch';
 import ReservationsList from '../components/reservations/ReservationsList';
 import Modal from '../components/Modal';
 import Review from '../components/reservations/Review';
+import toast from 'react-hot-toast';
 
 function Reservations() {
 	const [reservations, fetchReservations] = useApiFetch();
@@ -20,6 +21,7 @@ function Reservations() {
 			url: `/bookings/${id}`,
 			method: 'DELETE',
 		});
+		toast.success('Succesfully deleted!');
 	};
 
 	const closeModal = () => {
@@ -28,12 +30,11 @@ function Reservations() {
 
 	const handleOpenModal = (id) => {
 		setOpenModal(true);
-		console.log('Rate', id);
 		setChild(<Review hotelId={id} closeModal={closeModal} />);
 	};
 
 	return (
-		<div className="max-w-5xl mx-auto px-5 py-16">
+		<div className="max-w-5xl mx-auto px-5 py-16 h-[88dvh]">
 			<ReservationsList
 				reservations={reservations}
 				onDelete={handleDelete}

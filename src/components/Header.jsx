@@ -17,7 +17,7 @@ function Header() {
 				<Brand />
 
 				<Menu openMenu={isOpen} closeMenu={handleToggleMenu}>
-					<Nav />
+					<Nav closeMenu={handleToggleMenu} />
 				</Menu>
 
 				<button className="p-1 md:hidden" onClick={handleToggleMenu}>
