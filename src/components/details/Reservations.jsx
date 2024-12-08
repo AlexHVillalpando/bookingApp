@@ -21,7 +21,7 @@ function Reservations({ hotelId }) {
 	const onSubmit = (dataForm) => {
 		//Validaciones opcionales
 		dataForm.hotelId = hotelId;
-		console.log(dataForm);
+		//console.log(dataForm);
 		reset();
 	};
 

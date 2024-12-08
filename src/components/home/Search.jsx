@@ -13,10 +13,10 @@ function Search({ setResult }) {
 		<form onSubmit={handleSubmit} className="w-full md:w-fit">
 			<div className="input-form flex items-center gap-5">
 				<input
-					placeholder="City..."
+					placeholder="Enter city, hotel, country..."
 					ref={inputRef}
 					type="text"
-					className=" w-full py-1 px-2 focus:outline-none "
+					className=" w-full py-1 px-2 focus:outline-none bg-background text-primary "
 				/>
 				<button className="btn">Search</button>
 			</div>

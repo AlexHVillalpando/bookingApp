@@ -3,7 +3,7 @@ import Header from '../components/Header';
 
 function MainLayout() {
 	return (
-		<div>
+		<div className="bg-background">
 			<Header />
 			<Outlet />
 		</div>

@@ -12,7 +12,7 @@ function Header() {
 	};
 
 	return (
-		<div className="sticky top-0 bg-white h-20 w-full shadow-lg z-10">
+		<div className="sticky top-0 bg-card h-20 w-full shadow-lg z-10">
 			<div className="max-w-5xl mx-auto px-5 h-full flex items-center justify-between">
 				<Brand />
 
@@ -20,7 +20,10 @@ function Header() {
 					<Nav closeMenu={handleToggleMenu} />
 				</Menu>
 
-				<button className="p-1 md:hidden" onClick={handleToggleMenu}>
+				<button
+					className="p-1 text-primary md:hidden"
+					onClick={handleToggleMenu}
+				>
 					<IoMdMenu className="size-7" />
 				</button>
 			</div>

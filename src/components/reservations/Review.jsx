@@ -32,13 +32,13 @@ function Review({ hotelId, closeModal }) {
 		closeModal();
 	};
 	return (
-		<div className="w-80">
+		<div className="w-80 bg-card text-primary">
 			<h2 className="text-2xl font-semibold mb-3">Review</h2>
 			<div className="mb-3">
 				<ReviewRating setReview={setReview} />
 			</div>
 			<textarea
-				className="input-form resize-none h-24 mb-3"
+				className="input-form resize-none h-24 mb-3 bg-background"
 				placeholder="Leave your review..."
 				value={review.comment}
 				onChange={(e) => setReview({ ...review, comment: e.target.value })}

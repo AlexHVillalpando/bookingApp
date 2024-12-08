@@ -22,7 +22,7 @@ function ReservationCard({ reservation, onDelete, onRate }) {
 	const totalPrice = pricePerNight * nights;
 
 	return (
-		<div className="bg-white-500 shadow-lg rounded-lg overflow-hidden hover:scale-105 transition-transform duration-500">
+		<div className="bg-card text-primary shadow-lg rounded-lg overflow-hidden hover:scale-105 transition-transform duration-500">
 			<h2 className="text-xl font-semibold p-4 bg-blue-500 text-white">
 				<Link to={`/hotel/${reservation?.hotel?.id}`}>
 					{reservation?.hotel.name}
@@ -82,7 +82,7 @@ function ReservationCard({ reservation, onDelete, onRate }) {
 					</p>
 				</div>
 			</div>
-			<div className="flex justify-between bg-gray-50 py-4 px-6">
+			<div className="flex justify-between bg-card py-4 px-6">
 				<button
 					className="btn bg-red-500"
 					onClick={() => onDelete(reservation?.id)}

@@ -52,27 +52,29 @@ function Reservation({ hotelId }) {
 
 	useEffect(() => setMinCheckOut(CheckIn), [CheckIn]);
 
-	console.log(minCheckOut);
-
 	return (
 		<form onSubmit={handleSubmit(onSubmit)}>
 			<div className="flex flex-col md:flex-row md:items-center justify-center gap-2 mb-4">
 				<div className="flex items-center justify-center gap-2 mb-4">
 					<div className="flex flex-col items-center">
-						<label className="font-semibold text-sm">Check-In</label>
+						<label className="font-semibold text-sm text-primary">
+							Check-In
+						</label>
 						<input
 							type="date"
-							className="border px-3 py-1 rounded-sm"
+							className="border px-3 py-1 rounded-sm bg-card text-primary"
 							{...register('checkIn')}
 							min={today}
 							onChange={(e) => handleMinCheckOut(e)}
 						/>
 					</div>
 					<div className="flex flex-col items-center">
-						<label className="font-semibold text-sm">Check-Out</label>
+						<label className="font-semibold text-sm text-primary">
+							Check-Out
+						</label>
 						<input
 							type="date"
-							className="border px-3 py-1 rounded-sm"
+							className="border px-3 py-1 rounded-sm bg-card text-primary"
 							{...register('checkOut')}
 							min={minCheckOut}
 						/>

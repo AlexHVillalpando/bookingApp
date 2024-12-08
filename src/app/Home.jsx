@@ -4,8 +4,8 @@ import HotelsList from '../components/home/HotelsList.jsx';
 import Search from '../components/home/Search.jsx';
 import Filter from '../components/home/Filter.jsx';
 import Menu from '../components/Menu.jsx';
+
 import { FiFilter } from 'react-icons/fi';
-import { cn } from '../utils/index.js';
 
 function Home() {
 	const { hotels, getAll } = useHotels();
@@ -31,7 +31,7 @@ function Home() {
 			<section className="max-w-5xl mx-auto px-5 py-10 ">
 				<div className="mb-8 flex items-center justify-center gap-4">
 					<Search setResult={setResult} />
-					<button className="md:hidden" onClick={handleToggle}>
+					<button className="md:hidden text-primary" onClick={handleToggle}>
 						<FiFilter className="size-6" />
 					</button>
 					<Menu openMenu={openMenu} closeMenu={handleToggle}>

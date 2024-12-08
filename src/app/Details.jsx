@@ -31,12 +31,14 @@ function Details() {
 		);
 
 	return (
-		<div>
+		<div className="bg-background">
 			<div className="">
 				<Hero hotel={hotel} />
 			</div>
 			<div className="max-w-5xl mx-auto px-5 py-10">
-				<h2 className="text-2xl font-semibold text-center mb-4">Reserve</h2>
+				<h2 className="text-2xl font-semibold text-center mb-4 text-primary">
+					Reserve
+				</h2>
 				<div className="mb-8">
 					{isAuth ? (
 						<>
@@ -61,7 +63,7 @@ function Details() {
 					)}
 				</div>
 				{/*Grid */}
-				<div className="grid grid-cols-2 gap-5 mb-8">
+				<div className="text-primary grid grid-cols-2 gap-5 mb-8">
 					<div className="col-span-2">
 						<Description
 							rating={hotel?.rating}
@@ -82,11 +84,11 @@ function Details() {
 				</div>
 
 				<div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-					<div>
+					<div className="text-primary">
 						<Reviews hotelId={hotel?.id} />
 					</div>
 
-					<div className="h-full">
+					<div className="h-full text-primary">
 						<div className="sticky top-20">
 							<RelatedHotels cityId={hotel?.cityId} hotelId={hotel?.id} />
 						</div>

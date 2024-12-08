@@ -13,7 +13,7 @@ function Modal({ children, openModal, closeModal }) {
 				className="absolute top-0 left-0 w-full h-full bg-black/50"
 				onClick={closeModal}
 			/>
-			<div className="bg-white p-9 relative rounded-lg shadow-lg">
+			<div className="bg-card p-9 relative rounded-lg shadow-lg">
 				{children}
 			</div>
 		</div>

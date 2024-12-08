@@ -19,11 +19,11 @@ function Filter({ setResult }) {
 	};
 
 	return (
-		<div className="input-form w-full md:w-fit">
+		<div className="bg-card input-form w-full md:w-fit">
 			<select
 				ref={selectRef}
 				onChange={handleChange}
-				className="py-1 px-2 w-full focus:outline-none"
+				className="py-1 px-2 w-full focus:outline-none bg-card text-primary cursor-pointer"
 			>
 				<option value="">All cities</option>
 				{cities?.map((city) => (
