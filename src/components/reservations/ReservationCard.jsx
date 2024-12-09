@@ -85,7 +85,7 @@ function ReservationCard({ reservation, onDelete, onRate }) {
 			<div className="flex justify-between bg-card py-4 px-6">
 				<button
 					className="btn bg-red-500"
-					onClick={() => onDelete(reservation?.id)}
+					onClick={() => onDelete(reservation)}
 				>
 					Delete
 				</button>
