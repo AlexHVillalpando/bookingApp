@@ -1,5 +1,6 @@
 import { Outlet } from 'react-router';
 import Brand from '../components/Brand';
+import Contact from './Contact';
 
 function AuthLayouts() {
 	return (
@@ -8,6 +9,7 @@ function AuthLayouts() {
 				<Brand />
 			</div>
 			<Outlet />
+			<Contact />
 		</div>
 	);
 }

@@ -47,6 +47,10 @@
 	.error-validation {
 		@apply text-red-500 text-xs font-semibold;
 	}
+
+	.contact__btn {
+		@apply text-primary w-fit h-fit p-1 fixed top-[80dvh] left-0 rounded-r-lg bg-[#66666650];
+	}
 }
 
 @layer utilities {
