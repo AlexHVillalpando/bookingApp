@@ -8,7 +8,7 @@ Se usaron las siguientes paqueterías y dependencias:
 
 React router dom, react hook form, zod, tailwind-merge, clsx, react icons, box-icons, react gallery y react toggle.
 
-https://reactrouter.com/
+https://reactrouter.com/ \n
 https://react-hook-form.com/
 https://zod.dev/
 https://tailwindcss.com/
