@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import ReviewRating from './ReviewRating';
 import useApiFetch from '../../hooks/useApiFetch';
+import toast from 'react-hot-toast';
 
 const initialState = {
 	hotelId: null,
@@ -29,6 +30,7 @@ function Review({ hotelId, closeModal }) {
 			},
 		});
 		setReview(initialState);
+		toast.success('Review submited!');
 		closeModal();
 	};
 	return (

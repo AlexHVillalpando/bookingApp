@@ -11,7 +11,7 @@ import Toggle from 'react-toggle';
 
 const ls = window.localStorage;
 const initialTheme = ls.getItem('theme');
-console.log(initialTheme === 'light');
+//console.log(initialTheme === 'light');
 
 function Nav({ closeMenu }) {
 	const [darkMode, setDarkMode] = useState(false);
