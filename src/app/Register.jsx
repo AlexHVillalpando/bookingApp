@@ -9,7 +9,7 @@ function Register() {
 			<p className="mt-6">
 				Do you already have an account?{' '}
 				<Link to="/login" className="text-blue-500 font-semibold">
-					Sing in.
+					Sign in.
 				</Link>
 			</p>
 		</div>

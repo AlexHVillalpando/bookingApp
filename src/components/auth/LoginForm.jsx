@@ -52,7 +52,7 @@ function LoginForm() {
 					<p className="error-validation">{errors.password.message}</p>
 				)}
 			</div>
-			<button className="btn w-full m">Sing in</button>
+			<button className="btn w-full m">Sign in</button>
 		</form>
 	);
 }
